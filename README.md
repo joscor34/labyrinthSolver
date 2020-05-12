@@ -40,4 +40,6 @@ Contenido:
 
 ![Laberinto resuelto](/assets/images/laberinto_resuelto.png "Laberinto resuelto")
 
-En este caso las **X** marcán el camino mas óptimo.
+En este caso las **X** marcán el camino mas óptimo.  
+
+El tamaño del laberinto es de un mínimo de 15 columnas por 15 renglones y de un máximo de 50 columnas por 50 renglones.
