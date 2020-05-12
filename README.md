@@ -4,13 +4,13 @@ Este programa elavorado en lenguaje C se encarga de resolver un laberintos indic
 
 ## Argumentos
 
-El programa usa diferentes tipos de argumento:
+El programa utiliza diferentes tipos de argumento:
   
-- *-h* Para desplegar informacíon sobre los otros argmuntos e información sobre el programa.
+- *-h* Para desplegar informacíon sobre los otros argumentos e información sobre el programa.
 
-- *-s* Para mostras todos los caminos posibles para completar el laberinto.
+- *-s* Para mostrar todos los caminos posibles para completar el laberinto.
   
-- *-n* Para mostrar el camino mas optimo.
+- *-n* Para mostrar el camino mas óptimo.
 
 ## Ejecución
 
@@ -20,7 +20,7 @@ Para ejecutar el programa ingresa el siguiente comando en tu consola:
 
 ## Archivos de entrada y de salida
 
-Los archvos de entrada para son aquellos que contienen el laberinto y tienen la extención __*.lab*__.
+Los archivos de entrada son aquellos que contienen el laberinto y tienen la extención __*.lab*__.
 
 Por ejemplo __*example.lab*__
 
@@ -28,7 +28,7 @@ Contenido:
 
 ![Laberinto sin resolver](/assets/images/laberinto_sin_resolver.png "Laberinto sin resolver")
 
-La **E** o **e** indican el inicio del laberinto y **S** o **s** marcan el final. Las **@** indican los limites y las paredes del laberinto.  
+La **E** o **e** indican el inicio del laberinto y la **S** o **s** marca el final. Las **@** indican los limites y las paredes del laberinto.  
 
 ------  
 
