@@ -25,25 +25,62 @@ int comparar_argumentos(char **arg, int archivos) {
 void abrir_archivo(char *nombre_archivo) {
 	FILE *archivo;
 	char caracter;
-	
+  char line[50];
+  int d = 0;
+  int lines = 1;
+  int i = 0;
+  int cols = 0;
+  int espacio = 0;
 	archivo = fopen(nombre_archivo,"r");
 	
 	if (archivo == NULL) {
     printf("\nError de apertura del archivo. \n\n");
   } else {
     printf("\nEl contenido del archivo de prueba es \n\n");
-    while((caracter = fgetc(archivo)) != EOF) {
-		  printf("%c",caracter);
-      if(caracter == '@'){
-        printf("Barrera");
-      }else if(caracter == 'e' || caracter == 'E') {
-        printf("Cominenzo");
-      } else if(caracter == 's' || caracter == 'S') {
-        printf("final");
-      } else {
-        printf("camino");
-      }
+    while(1) {
+		  if (fgets(line, 2501, archivo) == NULL) break;
+        line[strlen(line)-1] = 0;   // remove newline
+        printf("%s\n",line);   // print a newline, since the line no longer contains one
+        cols = strlen(line);
+        lines +=1;  
+        i++;
 	  }
   }
+  printf("%d\n", i);
+  printf("%d\n", cols + 1);
+  printf("%d", espacio);
   fclose(archivo);
+}
+
+void crearMatriz(char *nombre_archivo) {
+  FILE *fp = fopen(nombre_archivo, "r");
+  char filas;
+  char cols;
+  if(fp == NULL) {
+    printf("Something was wron");
+  }
+  char linea[50];
+  fgets(linea, 2501, fp);
+  char *token = strtok(linea, "");
+  filas = atoi(token);
+  token = strtok(NULL, "");
+  cols = atoi(token);
+  int **matriz = int*[filas]
+  for(int i = 0; 0 < filas; i ++) {
+    matriz[i] = new int[cols];
+    fgets(linea, 2501, fp);
+    token = strtok(linea, "");
+    matriz[i][0] = atoi(token);
+    for(int j = 0; 0<cols; i++){
+      token = strtok(NULL, "");
+      matriz[i][j] = atoi(token);
+
+    }
+  }
+  fclose(fp);
+  for(int h = 0; h < rows; h++) {
+    for(int u = 0; u < cols; u++){
+      printf("%c" matriz[h][u]);
+    }
+  }
 }

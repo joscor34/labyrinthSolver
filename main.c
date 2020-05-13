@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv) {
   if(comparar_argumentos(argv, argc) == 1) {
-    abrir_archivo(argv[2]);
+    crearMatriz(argv[2]);
   }
   return 0;
 }
