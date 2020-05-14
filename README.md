@@ -5,11 +5,11 @@ Este programa elavorado en lenguaje C se encarga de resolver un laberintos indic
 ## Argumentos
 
 El programa utiliza diferentes tipos de argumento:
-  
+
 - *-h* Para desplegar informacíon sobre los otros argumentos e información sobre el programa.
 
 - *-s* Para mostrar todos los caminos posibles para completar el laberinto.
-  
+
 - *-n* Para mostrar el camino mas óptimo.
 
 ## Ejecución

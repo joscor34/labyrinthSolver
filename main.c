@@ -53,7 +53,11 @@ int main(int argc, char **argv)
      {
        elimina(Laberinto, filas);
        elimina(resuelto, filas);
+     } else
+     {
+       ayuda();
      }
+     
 
 
    return 0;

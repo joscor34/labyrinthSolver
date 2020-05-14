@@ -14,10 +14,8 @@ void elimina(char** lab, int fil);
 void ayuda(void);
 
 //función de validar el nombre del archivo ejecutable
-int validar(int canti, char **arg)
-{
-  //se verifica las palabras que se ingresen en la linea de comandos para ver el ejecutable del programa (2)
-  if (canti==2)
+int validar(int canti, char **arg){
+   if (canti==2)
     {
       if(strcmp(arg[1],"-h")==0)
 {
@@ -37,7 +35,7 @@ int validar(int canti, char **arg)
     //se vuelve a validar la cantidad de palabras ingresadas desde la linea de comandos(3)
   else if (canti==3)
     {
-      if(strcmp(arg[1],"-n")==0)
+      if(strcmp(arg[1],"-pasos")==0)
 return 2;
       else if(strcmp(arg[1],"-h")==0)
 {
@@ -50,7 +48,7 @@ return 1;
     //se vuelve a validar de cantidad de palabras ingresadas desde la linea de comandos (4)
   else if(canti==4)
     {
-      if(strcmp(arg[1],"-n")==0)
+      if(strcmp(arg[1],"-pasos")==0)
 return 2;
       else if(strcmp(arg[1],"-h")==0)
 {
@@ -282,7 +280,7 @@ void meter(char** lab, int fil,int col, int tiempo, int solu, int pasos, int can
       //se valida de nuevo las palabras ingresadas desde la linea de comandos (3)
   else if(canti==3)
     {
-      if(strcmp(arg[1],"-n")==0)
+      if(strcmp(arg[1],"-pasos")==0)
 {
  habin=1;
  strcpy(nombre,"resultados_laberinto.log");
@@ -321,7 +319,8 @@ void ayuda(void)
 {
   //se imprime la manera en la que el el programa va funcionar y si se tiene dudas, están los opciones para ver sus ejecuciones
   printf("El programa corre con las siguiente linea de comando\n\nAnalizaLaberinto [opcion] <in_File> [out_File]\n\n");
-  printf("*[opcion]Este argumento es opcional e indicara informacion adicional que se quiere obtener al momento de ejecutar el programa.\nEn el caso de que este argumento se haya dado al momento de ejecutar el  programa,  podra  tener  alguno  de  los  siguientes valores:\n\t*-n: Indica  que  se  desea  conocer  el  numero total de  soluciones  posibles  (rutas  entre  la entrada y la salida).\n\t*-h: Con esta opción unicamente se desplegara una ayuda en pantalla, indicando al usuario de que  manera debe correr el programa asi como cuales son las opciones disponibles y que es lo que hace cada una de ellas.  En el caso de que se de esta opcion no sera necesario proporcionar ningun otro argumento\n");
+  printf("*[opcion]Este argumento es opcional e indicara informacion adicional que se quiere obtener al momento de ejecutar el programa.\nEn el caso de que este argumento se haya dado al momento de ejecutar el  programa,  podra  tener  alguno  de  los  siguientes valores:\n\t*-pasos: Indica  que  se  desea  conocer  el  numero total de  soluciones  posibles  (rutas  entre  la entrada y la salida).\n\t*-h: Con esta opción unicamente se desplegara una ayuda en pantalla, indicando al usuario de que  manera debe correr el programa asi como cuales son las opciones disponibles y que es lo que hace cada una de ellas.  En el caso de que se de esta opcion no sera necesario proporcionar ningun otro argumento\n");
   printf("*<in_File>: Sera el nombre del archivo de texto que contenga el laberinto. Este argumento es obligatorio\n");
   printf("*[out_File]: Sera el nombre del archivo de texto que contendra la solución del laberinto, asi como las estadisticas del analisis.\nEl  ultimo argumento es opcional y en caso de que no sea pasado al momento de ejecutar el programa el nombre del archivo debera ser resultados_laberinto.log\n\nGracias por su informacion y vuelva pronto.\n");
 }
+    
