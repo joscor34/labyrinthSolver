@@ -1,4 +1,9 @@
+int validar();
+void leer();
+char** valab();
+void imprimir();
+void resolver();
+int cuentapasos();
+void meter();
+void elimina();
 void ayuda();
-int comparar_argumentos();
-void abrir_archivo();
-void crearMatriz();
